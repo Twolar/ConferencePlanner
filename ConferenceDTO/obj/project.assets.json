@@ -294,7 +294,7 @@
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/taylorbennett/.config/NuGet/NuGet.Config"
+        "/Users/taylorbennett/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
