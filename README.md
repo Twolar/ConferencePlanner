@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/Twolar/ConferencePlanner.svg?token=BkeWHsxqq554WZbYApwz&branch=master)](https://travis-ci.com/Twolar/ConferencePlanner)
 # ConferencePlanner2019
 
 ## Taylor Bennett
