@@ -17,7 +17,7 @@
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/taylorbennett/.nuget/NuGet/NuGet.Config"
+          "/Users/taylorbennett/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -27,7 +27,11 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/ConferenceDTO.csproj": {
+                "projectPath": "/Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/ConferenceDTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -67,6 +71,60 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/ConferenceDTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/ConferenceDTO.csproj",
+        "projectName": "ConferenceDTO",
+        "projectPath": "/Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/ConferenceDTO.csproj",
+        "packagesPath": "/Users/taylorbennett/.nuget/packages/",
+        "outputPath": "/Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/taylorbennett/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             }
           },
           "imports": [

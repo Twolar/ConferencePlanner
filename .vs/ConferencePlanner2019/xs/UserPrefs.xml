@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{18267011-65AB-443C-8249-5E5F37D00ADD}|Default">
+  <MonoDevelop.Ide.ItemProperties.BackEnd PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConferenceDTO/Speaker.cs">
+    <Files>
+      <File FileName="ConferenceDTO/Speaker.cs" Line="17" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ConferencePlanner2019" expanded="True">
+            <Node name="BackEnd" expanded="True" />
+            <Node name="ConferenceDTO" expanded="True">
+              <Node name="Speaker.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
