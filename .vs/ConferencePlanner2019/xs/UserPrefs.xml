@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{18267011-65AB-443C-8249-5E5F37D00ADD}|Default">
   <MonoDevelop.Ide.ItemProperties.BackEnd PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ConferenceDTO/Speaker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FrontEnd/Pages/Index.cshtml.cs">
     <Files>
       <File FileName="ConferenceDTO/Speaker.cs" Line="17" Column="2" />
+      <File FileName="FrontEnd/Pages/Index.cshtml.cs" Line="21" Column="64" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ConferencePlanner2019" expanded="True">
-            <Node name="BackEnd" expanded="True" />
-            <Node name="ConferenceDTO" expanded="True">
-              <Node name="Speaker.cs" selected="True" />
+            <Node name="FrontEnd" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Index.cshtml.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
