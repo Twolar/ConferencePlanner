@@ -7,3 +7,12 @@
 /Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.AssemblyInfo.cs
 /Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.dll
 /Users/taylorbennett/dev/ConferencePlanner2019/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.pdb
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/bin/Debug/netstandard2.0/ConferenceDTO.deps.json
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/bin/Debug/netstandard2.0/ConferenceDTO.dll
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/bin/Debug/netstandard2.0/ConferenceDTO.pdb
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.csprojAssemblyReference.cache
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.csproj.CoreCompileInputs.cache
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.AssemblyInfoInputs.cache
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.AssemblyInfo.cs
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.dll
+/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/obj/Debug/netstandard2.0/ConferenceDTO.pdb
