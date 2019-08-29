@@ -1,28 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using FrontEnd.Data;
-using FrontEnd.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using FrontEnd.Data;
+using FrontEnd.Services;
 
 namespace FrontEnd.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<User> _signInManager;
+        private readonly SignInManager<User> _signInManager;        
         private readonly UserManager<User> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-        private readonly IAdminService adminService;
-        private readonly IdentityDbContext identityDbContext;
+        private readonly IAdminService _adminService;
+        private readonly IdentityDbContext _dbContext;
 
         public RegisterModel(
             UserManager<User> userManager,
@@ -30,12 +28,14 @@ namespace FrontEnd.Areas.Identity.Pages.Account
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
             IAdminService adminService,
-            IdentityDbContext identityDbContext)
+            IdentityDbContext dbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _adminService = adminService;
+            _dbContext = dbContext;
         }
 
         [BindProperty]
@@ -47,10 +47,6 @@ namespace FrontEnd.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [DataType(DataType.Password)]
-            [Display(Name = "Admin creation key")]
-            public long? AdminCreationKey { get; set; }
-
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -66,18 +62,21 @@ namespace FrontEnd.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [DataType(DataType.Password)]
+            [Display(Name = "Admin creation key")]
+            public long? AdminCreationKey { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            
-            if (await adminService.AllowAdminUserCreationAsync())
+            ReturnUrl = returnUrl;
+
+            if (await _adminService.AllowAdminUserCreationAsync())
             {
                 AllowAdminCreation = true;
-                _logger.LogInformation("Admin creation is enabled. Use the following key to create an admin user: {adminKey}", adminService.CreationKey);
+                _logger.LogInformation("Admin creation is enabled. Use the following key to create an admin user: {adminKey}", _adminService.CreationKey);
             }
-
-            ReturnUrl = returnUrl;
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
@@ -87,15 +86,14 @@ namespace FrontEnd.Areas.Identity.Pages.Account
             {
                 var user = new User { UserName = Input.Email, Email = Input.Email };
 
-                if (await adminService.AllowAdminUserCreationAsync() && Input.AdminCreationKey == adminService.CreationKey)
+                if (await _adminService.AllowAdminUserCreationAsync() && Input.AdminCreationKey == _adminService.CreationKey)
                 {
                     // Set as admin user
                     user.IsAdmin = true;
-                    // In the event user creation fails in the next few lines, set this so the admin key box still shows up on the retry page
-                    AllowAdminCreation = true;
                 }
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {
                     if (user.IsAdmin)
@@ -118,8 +116,10 @@ namespace FrontEnd.Areas.Identity.Pages.Account
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
+
                     return LocalRedirect(returnUrl);
                 }
+
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
