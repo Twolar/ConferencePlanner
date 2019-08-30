@@ -3011,6 +3011,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Pages/Admin/EditSession.cshtml",
+      "TargetPath": "Pages/Admin/EditSession.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Pages/Index.cshtml",
       "TargetPath": "Pages/Index.cshtml",
       "FileKind": "mvc"

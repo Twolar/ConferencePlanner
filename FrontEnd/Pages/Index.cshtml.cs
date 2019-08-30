@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FrontEnd.Services;
 using ConferenceDTO;
+using System.Security.Claims;
 
 namespace FrontEnd.Pages
 {
@@ -24,8 +25,17 @@ namespace FrontEnd.Pages
 
         public int CurrentDayOffset { get; set; }
 
+        public bool IsAdmin { get; set; }
+        
+        [TempData]
+        public string Message { get; set; }
+
+        public bool ShowMessage => !string.IsNullOrEmpty(Message);
+
         public async Task OnGet(int day = 0)
         {
+            IsAdmin = User.IsAdmin();
+
             CurrentDayOffset = day;
 
             var sessions = await _apiClient.GetSessionsAsync();
