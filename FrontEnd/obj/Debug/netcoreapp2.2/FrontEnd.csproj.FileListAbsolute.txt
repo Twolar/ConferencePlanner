@@ -72,3 +72,6 @@
 /Users/taylorbennett/dev/ConferencePlanner/FrontEnd/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.g.cshtml.cs
 /Users/taylorbennett/dev/ConferencePlanner/FrontEnd/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ViewImports.g.cshtml.cs
 /Users/taylorbennett/dev/ConferencePlanner/FrontEnd/obj/Debug/netcoreapp2.2/Razor/Pages/Admin/EditSession.g.cshtml.cs
+/Users/taylorbennett/dev/ConferencePlanner/FrontEnd/obj/Debug/netcoreapp2.2/Razor/Pages/Welcome.g.cshtml.cs
+/Users/taylorbennett/dev/ConferencePlanner/FrontEnd/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/Account/Logout.g.cshtml.cs
+/Users/taylorbennett/dev/ConferencePlanner/FrontEnd/obj/Debug/netcoreapp2.2/Razor/Pages/MyAgenda.g.cshtml.cs

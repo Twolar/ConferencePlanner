@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FrontEnd.Services;
 using Microsoft.EntityFrameworkCore;
 using FrontEnd.Data;
+using FrontEnd.Filters;
 
 namespace FrontEnd
 {
@@ -50,7 +51,12 @@ namespace FrontEnd
                 });
             });
 
-            services.AddMvc()
+            services.AddTransient<RequireLoginFilter>();
+
+            services.AddMvc(opt => 
+                {
+                    opt.Filters.AddService<RequireLoginFilter>();
+                })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddRazorPagesOptions(options =>
                 {

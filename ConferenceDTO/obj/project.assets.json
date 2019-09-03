@@ -318,30 +318,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Taylor\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/taylorbennett/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\ConferencePlanner\\ConferenceDTO\\ConferenceDTO.csproj",
+      "projectUniqueName": "/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/ConferenceDTO.csproj",
       "projectName": "ConferenceDTO",
-      "projectPath": "C:\\Dev\\ConferencePlanner\\ConferenceDTO\\ConferenceDTO.csproj",
-      "packagesPath": "C:\\Users\\Taylor\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\ConferencePlanner\\ConferenceDTO\\obj\\",
+      "projectPath": "/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/ConferenceDTO.csproj",
+      "packagesPath": "/Users/taylorbennett/.nuget/packages/",
+      "outputPath": "/Users/taylorbennett/dev/ConferencePlanner/ConferenceDTO/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Taylor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/taylorbennett/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
